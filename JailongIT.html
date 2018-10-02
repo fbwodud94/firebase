@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="https://s.codepen.io/assets/libs/modernizr.js" type="text/javascript"></script>
+
+
+    <style>
+        .caption {}
+
+        .border {
+            width: 1200px;
+            height: 310px;
+            text-align: center;
+            border: dashed 1px #000000;
+            border-top-left-radius: 22px;
+            border-top-right-radius: 22px;
+            border-bottom-left-radius: 22px;
+            border-bottom-right-radius: 22px;
+        }
+
+        /*style sheet*/
+
+        /*tab*/
+        ul.tabs {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul.tabs li {
+            background: none;
+            color: #222;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        ul.tabs li.current {
+            background: #ededed;
+            color: #222;
+            font-weight: bold;
+        }
+
+        .tab-content {
+            display: none;
+            background: #ededed;
+            padding: 15px;
+        }
+
+        .tab-content.current {
+            display: inherit;
+        }
+
+
+        /**/
+        ul.tabs1 {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul.tabs1 li {
+            background: none;
+            color: #222;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        ul.tabs1 li.current1 {
+            background: #ededed;
+            color: #222;
+            font-weight: bold;
+
+        }
+
+        .tab1-content {
+            display: none;
+            background: #ededed;
+            padding: 15px;
+        }
+
+        .tab1-content.current1 {
+            display: inherit;
+        }
+
+
+        /**/
+        ul.tabs2 {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul.tabs2 li {
+            background: none;
+            color: #222;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        ul.tabs2 li.current2 {
+            background: #ededed;
+            color: #222;
+            font-weight: bold;
+
+        }
+
+        .tab2-content {
+            display: none;
+            background: #ededed;
+            padding: 15px;
+        }
+
+        .tab2-content.current2 {
+            display: inherit;
+        }
+
+        /**/
+        ul.tabs3 {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+        }
+
+        ul.tabs3 li {
+            background: none;
+            color: #222;
+            display: inline-block;
+            padding: 10px 15px;
+            cursor: pointer;
+        }
+
+        ul.tabs3 li.current3 {
+            background: #ededed;
+            color: #222;
+            font-weight: bold;
+
+        }
+
+        .tab3-content {
+            display: none;
+            background: #ededed;
+            padding: 15px;
+        }
+
+        .tab3-content.current3 {
+            display: inherit;
+        }
+
+        .study {
+            text-decoration-line: underline;
+        }
+
+        .study:hover {
+            background-color: darkgray;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+        <header>
+        </header>
+
+        <div id="lay">
+            <a id="MOVE_TOP_BTN" href="#">TOP</a>
+
+            <div class="layBox">
+
+                <div id="div4">
+                    <p class="caption">※해당 링크를 클릭해서 다운로드 하세요※</p>
+                    <p class="caption">1.JAVA</p>
+
+                    <div class="border">
+                        <ul class="tabs">
+                            <li class="tab-link current" data-tab="tab-1">Java개발환경</li>
+                            <li class="tab-link" data-tab="tab-2">Java 개념</li>
+                            <li class="tab-link" data-tab="tab-3">Java 응용</li>
+                            <li class="tab-link" data-tab="tab-4">Java 프로젝트</li>
+                        </ul>
+
+                        <div id="tab-1" class="tab-content current">
+                            <a class="study" href="./text/Day02.docx">JAVA개발환경 구축하기!</a>
+
+                        </div>
+                        <div id="tab-2" class="tab-content">
+                            <a class="study" href="./text/Day02.docx">1. 변수와 상수 </a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">2. 연산자</a>
+                            <br>
+                            <br>
+
+                            <a class="study" href="./text/Day02.docx">3. 조건문과 반복문 </a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">4. 배열</a>
+                        </div>
+                        <div id="tab-3" class="tab-content">
+                            <p>*객체지향 프로그래밍*</p>
+                            <a class="study" href="./text/Day02.docx">1. 상속</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">2. 오버라이딩</a>
+                            <br>
+                            <br>
+
+                            <a class="study" href="./text/Day02.docx">3. 제어자 </a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">4. 다형성</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">5. 인터페이스</a>
+
+
+
+                        </div>
+                        <div id="tab-4" class="tab-content">
+                            <p>*JAVA 미니 프로젝트*</p>
+
+                            <a class="study" href="./text/Day02.docx">1. AWT</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">2. Event Handling</a>
+                            <br>
+                            <br>
+
+                            <a class="study" href="./text/Day02.docx">3. I/O </a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day02.docx">4. Swing</a>
+
+                        </div>
+
+                    </div>
+                </div>
+
+
+                <div id="div5">
+                    <p class="caption">2.DATABASE</p>
+                    <div class="border">
+                        <ul class="tabs1">
+                            <li class="tab-link current1" data-tab="tab1-1">DATABASE</li>
+                            <li class="tab-link" data-tab="tab1-2">SQL</li>
+                            <li class="tab-link" data-tab="tab1-3">MYSQL</li>
+                            <li class="tab-link" data-tab="tab1-4">JDBC</li>
+                        </ul>
+
+                        <div id="tab1-1" class="tab1-content current1">
+                            <a class="study" href="./text/Day05.docx">1. DATABASE 설치하기 </a>
+
+                        </div>
+                        <div id="tab1-2" class="tab1-content">
+                            <a class="study" href="./text/Day05.docx">1. DDL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. DCL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. DML</a>
+
+                        </div>
+                        <div id="tab1-3" class="tab1-content">
+                            <a class="study" href="./text/Day05.docx">1. MySQL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. Oracle</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. MongoDB</a>
+
+                        </div>
+                        <div id="tab1-4" class="tab1-content">
+                            <a class="study" href="./text/Day05.docx">1. JDBC</a>
+
+                        </div>
+                    </div>
+
+
+
+
+                </div>
+
+                <div id="div6">
+                    <p class="caption">3.HTML/CSS/JAVASCRIPT</p>
+                    <div class="border">
+
+                        <ul class="tabs2">
+                            <li class="tab-link current2" data-tab="tab2-1">HTML</li>
+                            <li class="tab-link" data-tab="tab2-2">CSS</li>
+                            <li class="tab-link" data-tab="tab2-3">JAVASCRIPT</li>
+                            <li class="tab-link" data-tab="tab2-4">JQUERY</li>
+                        </ul>
+
+                        <div id="tab2-1" class="tab2-content current2">
+                            <a class="study" href="./text/Day05.docx">1. MySQL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. Oracle</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. MongoDB</a>
+                        </div>
+                        <div id="tab2-2" class="tab2-content">
+                            <a class="study" href="./text/Day05.docx">1. MySQL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. Oracle</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. MongoDB</a>
+                        </div>
+                        <div id="tab2-3" class="tab2-content">
+                            <a class="study" href="./text/Day05.docx">1. DOM</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. Ajax</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. firebase_hosting</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">4. making Game!!</a>
+                        </div>
+                        <div id="tab2-4" class="tab2-content">
+                            <a class="study" href="./text/Day05.docx">1. MySQL</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">2. Oracle</a>
+                            <br>
+                            <br>
+                            <a class="study" href="./text/Day05.docx">3. MongoDB</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="div7">
+                    <p class="caption">4.JSP/Servlet</p>
+                    <div class="border">
+                        <ul class="tabs3">
+                            <li class="tab-link current3" data-tab="tab3-1">Tab One</li>
+                            <li class="tab-link" data-tab="tab3-2">Tab Two</li>
+                            <li class="tab-link" data-tab="tab3-3">Tab Three</li>
+                            <li class="tab-link" data-tab="tab3-4">Tab Four</li>
+                        </ul>
+
+                        <div id="tab3-1" class="tab3-content current3">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                        <div id="tab3-2" class="tab3-content">
+                            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                        </div>
+                        <div id="tab3-3" class="tab3-content">
+                            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+                        </div>
+                        <div id="tab3-4" class="tab3-content">
+                            Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <div class='space'>
+                연락처: 010-5603-5771
+                email: fbwodudokok@hanmail.net
+            </div>
+
+
+
+        </div>
+
+
+
+    </div>
+
+
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+    <script>
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 500) {
+                    $('#MOVE_TOP_BTN').fadeIn();
+                } else {
+                    $('#MOVE_TOP_BTN').fadeOut();
+                }
+            });
+
+            $("#MOVE_TOP_BTN").click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

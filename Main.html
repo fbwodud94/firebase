@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <script src="http://code.jquery.com/jquery.js"></script>
+    <style>
+        .border {
+            width: 1200px;
+            height: 510px;
+            text-align: center;
+            border: dashed 1px #000000;
+            border-top-left-radius: 22px;
+            border-top-right-radius: 22px;
+            border-bottom-left-radius: 22px;
+            border-bottom-right-radius: 22px;
+        }
+
+        #me {
+            float: left;
+            margin-top: 25px;
+            margin-left: 20px;
+            border-top-left-radius: 200px;
+            border-top-right-radius: 200px;
+            border-bottom-left-radius: 200px;
+            border-bottom-right-radius: 200px;
+        }
+
+        #pr1 {
+            margin-top: 100px;
+        }
+
+        .d {
+            font-size: 25px;
+        }
+
+        #imgback {
+            width: 1200px;
+            height: auto;
+        }
+
+        #backimg1 {
+            position: fixed;
+            right: 420px;
+
+        }
+
+        #backimg2 {
+            position: fixed;
+            right: 120px;
+
+        }
+
+        #title {
+            width: 1200px;
+            height: 80px;
+            line-height: 80px;
+            text-align: center;
+            font-family: sans-serif;
+            font-weight: 700;
+            font-size: 50px;
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+
+    <nav id="nav"></nav>
+    <div id="title">
+        <p>Jailong's History</p>
+    </div>
+    <hr>
+    <header>
+        <h1></h1>
+    </header>
+    <div id="lay"></div>
+
+    <script>
+        $('document').ready(function() {
+            //Home가져오기
+            $('#lay').load("./JailongHOME.html");
+
+            $('#nav').load("./nav.html", function() {
+
+                var arr = ["JailongPHOTO", "JailongPROFILE", "JailongHOME", "JailongIT", "JailongOTHER"];
+
+
+                function fnMove(seq) {
+                    console.log(seq);
+                    var offset = $("#div" + seq).offset();
+                    $('html, body').animate({
+                        scrollTop: offset.top
+                    }, 400);
+                }
+
+                $('.drop-content button').each(function(index, item) {
+                    $(item).click(function(event) {
+                        if (index < 4) {
+                            $('#lay').load("./JailongPROFILE.html", function() {
+                                console.log(index);
+                                fnMove(index);
+                            })
+                        } else {
+                            $('#lay').load("./JailongIT.html", function() {
+                                console.log(index);
+                                fnMove(index);
+
+                            });
+
+                        }
+
+                    });
+
+                });
+
+
+                $('nav ul li').each(function(index, item) {
+                    $(item).click(function(event) {
+                        $('nav ul li').css('background-color', 'black');
+                        $('nav ul li').css('font-weight', '200');
+                        $('nav ul li').css('color', 'white');
+                        $('h1').css('display','none');
+
+
+                        $(this).css('background-color', 'white');
+                        $(this).css('color', 'black');
+
+                        $(this).css('font-weight', '600');
+
+                        $('#lay').load("./" + arr[index] + ".html");
+
+                    });
+                });
+
+
+            });
+        });
+    </script>
+
+</body>
+
+</html>

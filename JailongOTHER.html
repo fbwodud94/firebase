@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <style>
+
+
+    </style>
+
+
+</head>
+
+<body>
+    <div id="wrap">
+
+
+        <div id="lay">
+            <a id="MOVE_TOP_BTN" href="#">TOP</a>
+
+            <div class="layBox">
+                <p class="caption">Other1_Intern</p>
+                <div class="border">
+                    <p class="text">한국발명진흥회 한달간의 인턴생활_2016.8.2~8.31</p>
+                    <!-- 슬라이드쇼 컨테이너 -->
+                    <div class="slideshow-container">
+
+                        <!-- 숫자와 캡션이 있는 이미지 -->
+                        <div class="mySlides fade">
+                            <img src="./image/intern1.jpg" style="width:500px; height: 500px;">
+                            <div class="numbertext">1 / 2</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <img src="./image/intern2.jpg" style="width:500px; height: 500px;">
+                            <div class="numbertext">2 / 2</div>
+                        </div>
+                        <!-- 다음, 이전 이미지 버튼 -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                    </div>
+                    <br>
+
+                    <!-- 현재 이미지를 알려주는 하단의 점 -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                    </div>
+                </div>
+                <br>
+
+                <p class="caption">Other2_lecture01</p>
+                <div class="border">
+                    <p class="text">동계대학생 재능봉사_대전 천동 초등학교_2017.01.02~01.06</p>
+
+                    <img class="bong" src="./image/w1.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/w2.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/w3.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/20170102_194440.jpg" style="width:590px; height: 500px;">
+
+
+
+                    <br>
+
+
+                </div>
+
+                <p class="caption">Other2_lecture02</p>
+                <div class="border">
+                    <p class="text">강화초등학교_2017.10.19</p>
+
+                    <img class="bong" src="./image/2017-10-19-14-02-08-490%20(2).jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/2017-09-27-08-40-24-717.jpg" style="width:590px; height: 500px;">
+
+
+
+                    <br>
+
+
+                </div>
+
+                <p class="caption">Other3_lecture03</p>
+                <div class="border">
+                    <p class="text">미추홀 외국어 고등학교 강의(VR,AR,홀로그램)_2017.8.13</p>
+
+                    <img class="bong" src="./image/1500983772055.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/1500983739722.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/edu.jpg" style=" margin-left: 300px; width:590px; height: 500px;">
+
+                    <br>
+
+                </div>
+
+                <p class="caption">Other3_mentoring</p>
+                <div class="border">
+                    <p class="text">한국장학재단 멘토링_2015.02.02~11.06</p>
+
+                    <img class="bong" src="./image/mento1.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/mento2.jpg" style="width:590px; height: 500px;">
+                    <img class="bong" src="./image/mento3.jpg" style="margin-left: 300px; width:590px; height: 500px;">
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
+        <div class='space'>
+            연락처: 010-5603-5771
+            email: fbwodudokok@hanmail.net
+        </div>
+    </div>
+
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // 다음, 이전 제어
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // 사진 제어
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("mySlides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) {
+                slideIndex = 1
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() > 500) {
+                    $('#MOVE_TOP_BTN').fadeIn();
+                } else {
+                    $('#MOVE_TOP_BTN').fadeOut();
+                }
+            });
+
+            $("#MOVE_TOP_BTN").click(function() {
+                $('html, body').animate({
+                    scrollTop: 0
+                }, 400);
+                return false;
+            });
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,364 @@
+ * {
+     font-family: Sans-serif;
+     margin: 0 auto;
+     padding: 0;
+     box-sizing: border-box;
+
+
+ }
+
+ li {
+     list-style: none;
+
+ }
+
+ a {
+     text-decoration: none;
+     color: black;
+
+ }
+
+ /*
+
+ button {
+     color: black;
+     width: 240px;
+     height: 40px;
+     margin: 0;
+     padding: 0;
+     float: left;
+     
+ }
+*/
+
+ img {
+     border: 0;
+     max-width: 100%;
+ }
+
+
+
+ #wrap {
+     width: 100%;
+
+ }
+
+
+ h1 {
+     font-size: 70px;
+     text-align: center;
+     width: 1200px;
+     height: 400px;
+     line-height: 400px;
+     color: white;
+     background-image: url(./image/header.jpg);
+     background-repeat: no-repeat;
+     background-size: 100% 100%;
+ }
+
+ /*navigation bar*/
+ nav {
+     height: 40px;
+
+ }
+
+ #menuBox {
+     width: 1200px;
+ }
+
+ #menuItem li {
+     border-top: 1px solid gray;
+     border-bottom: 1px solid gray;
+     list-style: none;
+     background-color: black;
+     color: white;
+     width: 240px;
+     height: 40px;
+     text-align: center;
+     line-height: 40px;
+     float: left;
+     display: block;
+     
+
+     /*글씨체 두꺼워 지는 기능 추가하기*/
+ }
+
+ #menuItem li:hover {
+     background-color: white;
+     cursor: pointer;
+     color: black;
+
+ }
+
+ #menuItem {
+     margin: 0px;
+     position: relative;
+     display: inline-block;
+ }
+
+ #menuItem li:hover .drop {
+     background-color: #EBECF1;
+ }
+
+ .drop:hover .drop-content {
+     display: block;
+ }
+
+ .drop-content {
+     display: none;
+     position: absolute;
+     background-color: white;
+     min-width: 160px;
+     width: 240px;
+     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+     z-index: 1000;
+ }
+
+ .drop-content button {
+     color: black;
+     padding: 12px 16px;
+     text-decoration: none;
+     display: block;
+     border: none;
+     background-color: white;
+     font-size: 17px;
+     width: 100%;
+     height: 100%
+ }
+
+ .drop-content button:hover {
+     background-color: #EBECF1;
+ }
+
+
+
+ .layBox {
+     width: 1200px;
+
+
+ }
+
+ #center {
+     width: 700px;
+     float: left;
+ }
+
+
+
+
+
+
+ address {
+     text-align: right
+ }
+
+ .caption {
+     width: 1200px;
+     height: 50px;
+     text-align: center;
+     line-height: 50px;
+     font-weight: bold;
+ }
+
+
+
+ /*갤러리에 대한 style*/
+ div.gallery {
+     border: 1px solid #ccc;
+     width: 430px;
+     display: inline-block;
+
+
+ }
+
+ div.gallery:hover {
+     border: 1px solid #777;
+     cursor: pointer;
+
+
+ }
+
+ div.gallery img {
+     width: 100%;
+     height: 100%;
+     margin: 0;
+ }
+
+ div.desc {
+     padding: 15px;
+     text-align: center;
+     background-color: white;
+     width: auto;
+ }
+
+
+ .gpart {
+     width: 1200px;
+
+ }
+
+
+ .border {
+     background-color: white;
+     width: 1200px;
+     height: auto;
+     border: dashed 1px #000000;
+     border-top-left-radius: 22px;
+     border-top-right-radius: 22px;
+     border-bottom-left-radius: 22px;
+     border-bottom-right-radius: 22px;
+ }
+
+ .bong {
+     border-top-left-radius: 30px;
+     border-top-right-radius: 30px;
+     border-bottom-left-radius: 30px;
+     border-bottom-right-radius: 30px;
+
+ }
+
+ .bong:hover {
+     transform: scale(1.05, 1.05);
+
+ }
+
+
+
+ .text {
+     font-size: 18px;
+     text-align: center;
+     margin-top: 10px;
+ }
+
+
+ /* 슬라이드쇼 컨테이너의 디자인 */
+ .slideshow-container {
+     max-width: 1000px;
+     position: relative;
+     margin: auto;
+     text-align: center;
+ }
+
+ /* 이미지를 숨기는데 사용 */
+ .mySlides {
+     display: none;
+ }
+
+ /* 다음, 이전 버튼 */
+ .prev,
+ .next {
+     cursor: pointer;
+     position: absolute;
+     top: 50%;
+     width: auto;
+     margin-top: -22px;
+     padding: 20px;
+     color: white;
+     font-weight: bold;
+     font-size: 18px;
+     transition: 0.6s ease;
+     border-radius: 0 3px 3px 0;
+     background-color: rgba(0, 0, 0, 0.3);
+ }
+
+ /* "다음 버튼"을 오른쪽에 위치 */
+ .prev {
+     position: absolute;
+     left: 190px;
+
+ }
+
+ .next {
+     position: absolute;
+     right: 190px;
+
+
+     border-radius: 3px 0 0 3px;
+ }
+
+ /* 마우스를 올리면 배경색을 변경 */
+ .prev:hover,
+ .next:hover {
+     background-color: rgba(0, 0, 0, 0.8);
+ }
+
+ /* 숫자 부분 위에 적은 (1/3) <-- 이런거 */
+ .numbertext {
+     color: black;
+     font-size: 12px;
+     position: relative;
+ }
+
+ /* 하단의 점들 */
+ .dot {
+     cursor: pointer;
+     height: 15px;
+     width: 15px;
+     margin: 0 2px;
+     background-color: #bbb;
+     border-radius: 50%;
+     display: inline-block;
+     transition: background-color 0.6s ease;
+ }
+
+ .active,
+ .dot:hover {
+     background-color: #717171;
+ }
+
+ /* 페이드 효과 */
+ .fade {
+     -webkit-animation-name: fade;
+     -webkit-animation-duration: 1.5s;
+     animation-name: fade;
+     animation-duration: 1.5s;
+ }
+
+ @-webkit-keyframes fade {
+     from {
+         opacity: .4
+     }
+
+     to {
+         opacity: 1
+     }
+ }
+
+ @keyframes fade {
+     from {
+         opacity: .4
+     }
+
+     to {
+         opacity: 1
+     }
+ }
+
+
+ .space {
+
+     height: 200px;
+     width: 1200px;
+     margin: auto;
+     text-align: left;
+     line-height: 50px;
+     border-top: 1px solid black;
+
+ }
+
+ /*top button*/
+ a#MOVE_TOP_BTN {
+     background-color: #EBB2C3;
+     width: 50px;
+     height: 50px;
+     line-height: 50px;
+     text-align: center;
+     position: fixed;
+     right: 2%;
+     bottom: 50px;
+     display: none;
+     z-index: 999;
+     border-radius: 75px;
+
+ }
+

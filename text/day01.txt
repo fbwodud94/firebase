@@ -1,0 +1,56 @@
+package com.ict.pm;
+
+public class Ex02 {
+	
+	public static void main(String[] args) {
+	    //출력 후 라인 변경 안함 
+	    System.out.print("성명: ");
+            System.out.println("홍길동");
+		
+            System.out.println(); //줄바꿈 
+		
+            //포멧 문자열을 이용한다.
+	    System.out.printf("직업: %s\n" , "도둑");
+	    System.out.printf("나이: %d\n", 45);
+	    //System.out.printf("나이: %d", 'a'); 타입이 맞지 않아서 오류 발생 	  
+	    System.out.printf("나이: %d\n", (int)'a'); 
+	    
+	    //"a": 문자열 
+	    //'a': 문자 , 문자는 숫자로 형변환 가능 
+	    //'5': 문자
+	    //'45' : 에러 발생 --> "45"
+	    //실수 형식의 숫자 
+	    System.out.printf("시력: %.1f\n" , 1.8); //소수점 한자리까지 출력 
+	    
+	    System.out.println(":::::::::::::::");
+	    
+	    // \n: 줄바꿈, 
+	    // \a: 경고음
+	    // \t: tap 
+	    // \r: 출력커서 맨앞으로 (return)
+	    //%s: 문자열, %d: 정수, %f: 실수, %c: 문자 
+	    
+	    //자신의 간략한 프로필을 출력하는 프로그램 
+	    String name = "홍길동";
+	    String addr = "서울시 강서구 염창동";
+	    int age = 17;
+	    String jun = "정보통신공학";
+	    double height = 178.8;
+	    double weight = 70.0;
+	    double eye = 1.0;
+	    int money = 105468779;
+	    
+	    System.out.println("성명 : " +name);
+	    System.out.println("주소 : " +addr);
+	    System.out.println("나이 : " +age);
+	    System.out.print("전공 : "+ jun +"\n");
+	    System.out.print("키 : " + height + "\n");
+	    System.out.printf("몸무게 :%.1f\n", weight);
+	    System.out.printf("시력 : %.1f\n", eye);
+	    System.out.printf("재산 : %d 원", money);
+	    
+		
+		
+	}
+
+}
