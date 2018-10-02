@@ -62,6 +62,7 @@
             font-weight: 700;
             font-size: 50px;
         }
+
     </style>
 
 
@@ -87,7 +88,8 @@
 
             $('#nav').load("./nav.html", function() {
 
-                var arr = ["JailongPHOTO", "JailongPROFILE", "JailongHOME", "JailongIT", "JailongOTHER"];
+                var arr = ["JailongPHOTO", "JailongPROFILE", 
+                           "JailongHOME", "JailongIT", "JailongOTHER"];
 
 
                 function fnMove(seq) {
@@ -124,12 +126,17 @@
                         $('nav ul li').css('background-color', 'black');
                         $('nav ul li').css('font-weight', '200');
                         $('nav ul li').css('color', 'white');
-                        $('h1').css('display','none');
 
+                        //Home화면의 이미지
+                        if (index == 2) {
+                            $('h1').css('display', 'block');
 
+                        } else {
+                            $('h1').css('display', 'none');
+                        }
+                        
                         $(this).css('background-color', 'white');
                         $(this).css('color', 'black');
-
                         $(this).css('font-weight', '600');
 
                         $('#lay').load("./" + arr[index] + ".html");
@@ -140,6 +147,7 @@
 
             });
         });
+
     </script>
 
 </body>

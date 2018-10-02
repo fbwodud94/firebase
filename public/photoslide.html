@@ -1,0 +1,91 @@
+<div class="slideshow-container">
+    <!-- 숫자와 캡션이 있는 이미지 -->
+    <div class="mySlides fade">
+        <img src="./image/hobby1.jpg" alt="등산하는 재영이" width="900" height="700">
+        <div class="numbertext">1 / 8</div>
+    </div>
+
+    <div class="mySlides fade">
+        <img src="./image/1479011945307.jpg" alt="Forest" width="900" height="700">
+        <div class="numbertext">2 / 8</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="./image/2017-08-05-15-14-43-888.jpg" alt="관악산 계곡" width="500" height="700">
+        <div class="numbertext">3 / 8</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="./image/2017-10-15-14-11-55-843.jpg" alt="당산역스타벅스" width="500" height="700">
+        <div class="numbertext">4 / 8</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="./image/photo_travel.jpg" alt="대만여행" width="500" height="700">
+        <div class="numbertext">5 / 8</div>
+    </div>s
+    <div class="mySlides fade">
+        <img src="./image/photo_jeayoung&wonsang.jpg" alt="JY♡WS" width="500" height="700">
+        <div class="numbertext">6 / 8</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="./image/photo_wonsang.jpg" alt="아침고요수목원" width="500" height="700">
+        <div class="numbertext">7 / 8</div>
+    </div>
+    <div class="mySlides fade">
+        <img src="./image/photo_graduation.jpg" alt="주선이 졸업식" width="500" height="700">
+        <div class="numbertext">8 / 8</div>
+    </div>
+    <!-- 다음, 이전 이미지 버튼 -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+<!-- 현재 이미지를 알려주는 하단의 점 -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+    <span class="dot" onclick="currentSlide(7)"></span>
+    <span class="dot" onclick="currentSlide(8)"></span>
+</div>
+
+
+
+<script>
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    // 다음, 이전 제어
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // 사진 제어
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        var i;
+        var slides = document.getElementsByClassName("mySlides");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideIndex = 1
+        }
+        if (n < 1) {
+            slideIndex = slides.length
+        }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+    }
+    
+ 
+</script>

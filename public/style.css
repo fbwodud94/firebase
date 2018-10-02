@@ -131,6 +131,9 @@
  }
 
 
+#lay{
+    overflow: hidden;
+}
 
  .layBox {
      width: 1200px;
@@ -359,6 +362,5 @@
      display: none;
      z-index: 999;
      border-radius: 75px;
-
  }
 
